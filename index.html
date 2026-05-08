@@ -10,15 +10,52 @@
 </head>
 <body>
 
-<h1>Snake Game</h1>
+<div class="container">
 
-<p style="color:red;">TEST TEXT</p>
+  <!-- LEFT: LEADERBOARD -->
+  <div class="leaderboard">
+    <h2>TOP PLAYERS</h2>
+    <ol id="leaderboardList"></ol>
+  </div>
 
-<canvas id="game" width="400" height="400"></canvas>
+  <!-- CENTER: GAME -->
+  <div class="game-section">
 
-<p>Score: <span id="score">0</span></p>
+    <h1>Snake Game</h1>
 
-<button id="pauseBtn">Pause</button>
+    <div class="player-stats">
+      <p>Player: <span id="playerName">---</span></p>
+      <p>Best Score: <span id="bestScore">0</span></p>
+      <p>Rank: <span id="playerRank">---</span></p>
+    </div>
+
+    <canvas id="game" width="400" height="400"></canvas>
+
+    <p>Score: <span id="score">0</span></p>
+
+    <button id="pauseBtn">Pause</button>
+
+  </div>
+
+  <!-- RIGHT: LOGIN -->
+  <div class="login-section">
+
+    <h2>LOGIN</h2>
+
+    <input
+      type="text"
+      id="usernameInput"
+      placeholder="Enter username"
+      maxlength="12"
+    >
+
+    <p>Press ENTER to start</p>
+
+    <button id="resetScoresBtn">Reset Scores</button>
+
+  </div>
+
+</div>
 
 <script src="app.js"></script>
 
